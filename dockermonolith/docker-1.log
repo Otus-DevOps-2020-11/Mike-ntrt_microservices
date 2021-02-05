@@ -1,0 +1,16 @@
+REPOSITORY                 TAG       IMAGE ID       CREATED         SIZE
+ubuntu                     18.04     c090eaba6b94   2 weeks ago     63.3MB
+nginx                      alpine    e5dcd7aa4b5e   3 months ago    21.8MB
+alpine                     3.12      d6e46aa2470d   3 months ago    5.57MB
+hello-world                latest    bf756fb1ae65   13 months ago   13.3kB
+tehbilly/htop              latest    4acd2b4de755   2 years ago     6.91MB
+
+разница между контейнером и образом на основе docker inspect:
+контейнер - исполняемая сущьность.
+это видно из того, что inspect показывает его статус:
+State": {
+            "Status": "running",
+            "Running": true,
+            ...
+}
+образ - набор файлов, основа для запуска контейнера.
