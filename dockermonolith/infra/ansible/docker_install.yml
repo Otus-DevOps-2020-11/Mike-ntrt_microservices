@@ -30,8 +30,6 @@
         name: ubuntu
         groups: docker
         append: yes
-      notify: reset the ssh connection
 
-  handlers:
     - name: reset the ssh connection
       meta: reset_connection
