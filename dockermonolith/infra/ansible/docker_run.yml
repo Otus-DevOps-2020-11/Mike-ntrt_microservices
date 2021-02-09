@@ -1,0 +1,29 @@
+---
+- name: Run the docker container
+  hosts: all
+  vars:
+    docker_image_name: nitrate/otus-reddit:1.0
+    docker_container_name: reddit
+
+  tasks:
+  - name: Install pip
+    apt:
+      name: python3-pip
+    become: true
+
+  - name: Install Docker Module for Python
+    pip:
+      name: docker
+
+  - name: Pull the image
+    community.general.docker_image:
+      name: '{{ docker_image_name }}'
+      source: pull
+
+  - name: Start the container
+    community.general.docker_container:
+      name: '{{ docker_container_name }}'
+      image: '{{ docker_image_name }}'
+      state: started
+      published_ports: 9292:9292
+
