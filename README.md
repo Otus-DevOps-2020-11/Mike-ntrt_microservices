@@ -1,6 +1,13 @@
 # Mike-ntrt_microservices
 Mike-ntrt microservices repository
 
+### HW Lec 18 - Docker-4
+
+The project base name sets from folder name  
+How to Specifying the project name:  
+'docker-compose -p project_name' or use var 'COMPOSE_PROJECT_NAME'  
+
+
 ### HW Lec 17 - Docker-3
 
 the Microservices project
