@@ -1,0 +1,28 @@
+---
+- name: Setup and run Gitlab
+  hosts: all
+  tasks:
+
+    - name: Create directories for volumes
+      file:
+        path: '{{ item }}'
+        state: directory
+        mode: 0755
+      with_items:
+        - /srv/gitlab/config
+        - /srv/gitlab/data
+        - /srv/gitlab/logs
+      become: yes
+
+    - name: Copy docker-compose file
+      template:
+        src: ./templates/docker-compose.yml.j2
+        dest: /srv/gitlab/docker-compose.yml
+        owner: ubuntu
+        group: ubuntu
+      become: yes
+
+    - name: Run docker-compose up
+      docker_compose:
+        project_src: /srv/gitlab/
+        state: present
