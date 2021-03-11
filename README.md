@@ -1,6 +1,8 @@
 # Mike-ntrt_microservices
 Mike-ntrt microservices repository
 
+### HW Lec 20 - Gitlab-CI
+
 ### HW Lec 18 - Docker-4
 
 The project base name sets from folder name  
