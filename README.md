@@ -2,7 +2,9 @@
 Mike-ntrt microservices repository
 
 ### HW Lec 20 - Gitlab-CI
-test
+
+`gitlab-ci/infra/` contains terraform manifest and ansible playbooks to create a VM and install and run Gitlab
+`reddit/Dockerfile` describes how to build the Reddit app image
 
 ### HW Lec 18 - Docker-4
 
