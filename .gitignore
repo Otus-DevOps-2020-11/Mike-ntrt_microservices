@@ -7,3 +7,4 @@
 .terraform/
 *.retry
 *key-sa.json
+*.env

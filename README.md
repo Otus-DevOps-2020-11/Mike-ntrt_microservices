@@ -1,6 +1,12 @@
 # Mike-ntrt_microservices
 Mike-ntrt microservices repository
 
+### HW Lec 22 - Monitoring-1
+
+https://hub.docker.com/u/nitrate
+
+Makefile contains tasks for build, push, up and down containers
+
 ### HW Lec 20 - Gitlab-CI
 
 `gitlab-ci/infra/` contains terraform manifest and ansible playbooks to create a VM and install and run Gitlab
