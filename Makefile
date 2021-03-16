@@ -17,19 +17,19 @@ build-ui:
 	cd ./src/ui && bash ./docker_build.sh
 
 build-prometheus:
-	cd /monitoring/prometheus && docker build -t ${USER_NAME}/prometheus
+	cd ./monitoring/prometheus && docker build -t ${user_name}/prometheus .
 
 push-comment:
-	docker push ${USER_NAME}/comment:${tag}
+	docker push ${user_name}/comment:${tag}
 
 push-post:
-	docker push ${USER_NAME}/post:${tag}
+	docker push ${user_name}/post:${tag}
 
 push-ui:
-	docker push ${USER_NAME}/ui:${tag}
+	docker push ${user_name}/ui:${tag}
 
 push-prometheus:
-	docker push ${USER_NAME}/prometheus:${tag}
+	docker push ${user_name}/prometheus:${tag}
 
 build-all: build-reddit build-prometheus
 
@@ -40,3 +40,9 @@ up:
 
 down:
 	cd ./docker && docker-compose down
+
+monitoring-up:
+	cd ./docker && docker-compose -f docker-compose-monitoring.yml up -d
+
+monitoring-down:
+	cd ./docker && docker-compose -f docker-compose-monitoring.yml down
